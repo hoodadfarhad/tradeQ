@@ -5,9 +5,9 @@ import { addFunds, getFunds } from "../repositories/accountRepo.js";
 
 export async function depositAccount(amount) {
     const data = await addFunds(amount);
-    if (data > 200) {
-        throw new AppError("You damn rich! get out", 444)
-    }
+    // if (data > 200) {
+    //     throw new AppError("You damn rich! get out", 444)
+    // }
     return data;
 }
 

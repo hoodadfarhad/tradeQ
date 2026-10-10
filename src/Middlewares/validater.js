@@ -5,8 +5,10 @@ export function validate(schema) {
     const result = schema.safeParse(req.body);
 
     if (!result.success) {
+      console.log("Received body:", req.body);
+      console.log("Zod errors:", result.error.issues);
       return next(
-        new AppError("What the hell was that??", 400)
+        new AppError("Zod caught invalid error", 400)
       );
     }
 

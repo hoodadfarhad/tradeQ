@@ -11,3 +11,8 @@ export async function addFunds(amount) {
     return balance;
 }
 
+export async function deductFunds(amount) {
+    balance -= amount
+    return balance;
+}
+
